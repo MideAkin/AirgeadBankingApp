@@ -1,0 +1,43 @@
+Airgead Banking App - Pseudocode
+
+START PROGRAM
+
+1. DISPLAY welcome message
+
+2. PROMPT user to input:
+   - Initial Investment Amount
+   - Monthly Deposit Amount
+   - Annual Interest Rate (%)
+   - Number of Years for the investment
+
+3. VALIDATE each input:
+   - Ensure all values are numbers
+   - Ensure values are positive (greater than zero)
+   - If invalid, prompt again until valid input is given
+
+4. DISPLAY a summary screen showing:
+   - Initial Investment
+   - Monthly Deposit
+   - Annual Interest Rate
+   - Number of Years
+   - Prompt user to press Enter to continue
+
+5. CREATE an InvestmentCalculator object with the input values
+
+6. CALL function to display report WITHOUT monthly deposits:
+   - FOR each year from 1 to Number of Years:
+       - Calculate interest: interest = balance * (annualInterest / 100)
+       - Update balance: balance += interest
+       - DISPLAY year, ending balance, interest earned
+
+7. CALL function to display report WITH monthly deposits:
+   - FOR each year from 1 to Number of Years:
+       - Set yearlyInterest = 0
+       - FOR each month (1 to 12):
+           - Add monthly deposit to balance
+           - Calculate interest: interest = balance * (annualInterest / 100 / 12)
+           - Add interest to balance
+           - Accumulate interest into yearlyInterest
+       - DISPLAY year, ending balance, total interest earned
+
+8. END PROGRAM
